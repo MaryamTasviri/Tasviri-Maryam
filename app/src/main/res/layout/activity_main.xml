@@ -1,35 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        tools:ignore="MissingConstraints"
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="64dp"
-        android:text="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Please enter your info: "
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+                android:text="Name"
+                android:background="@color/colorPrimary"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"/>
 
-    <ImageView
-        tools:ignore="MissingConstraints"
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/imageText"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="94dp"
-        tools:srcCompat="@tools:sample/avatars"
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:text="Age"
+            android:background="@color/colorPrimary"
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="numberSigned"/>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:text="Email"
+            android:background="@color/colorPrimary"
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:text="Phone"
+            android:background="@color/colorPrimary"
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="phone"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:text="Save"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
         />
 
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayoutCompat>
